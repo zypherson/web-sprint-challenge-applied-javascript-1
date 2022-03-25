@@ -1,6 +1,6 @@
 import axios from "axios"
 import { articles } from "../mocks/data"
-//console.log("import data ===", articles);
+
 const entryPoint = document.querySelector('.cards-container')
 
 /*
@@ -51,7 +51,7 @@ const Card = (article) => {
   card.appendChild(author)
   author.appendChild(container)
   container.appendChild(authorPhoto)
-  container.appendChild(authorName)
+  author.appendChild(authorName)
 
   console.log(article)
   headline.textContent = article.headline
@@ -84,7 +84,7 @@ console.log(articles.articles.javascript)
         console.log(res)
         Object.keys(res.data.articles).forEach(key => {
           const articles = res.data.articles[key];
-          //console.log(articles)
+          console.log(articles)
           articles.forEach( article => { 
             const card =  Card(article)
             entryPoint.appendChild(card)
