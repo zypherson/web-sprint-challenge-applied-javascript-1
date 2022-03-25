@@ -76,9 +76,11 @@ describe('TASK 5 - Card', () => {
     expect(card.querySelector('div.card>div.headline').textContent).toMatch(/foo/i)
   })
   test('[8] returns a card with the correct author (element, attrs and text)', () => {
+    console.log(card.querySelector('div.card>div.author>span').textContent)
     expect(card.querySelector('div.card>div.author>span').textContent).toMatch(/bar/i)
   })
   test('[9] returns a card with the correct image (element and src)', () => {
+   
     expect(card.querySelector('div.card>div.author>div.img-container>img').src).toMatch(/baz/)
   })
 })
